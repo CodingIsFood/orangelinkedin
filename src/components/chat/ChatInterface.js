@@ -21,6 +21,7 @@ export default function ChatInterface({ initialConversations, currentUser, selec
         fetchMessages(selectedConvoId);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedConvoId, conversations]);
 
   const fetchMessages = async (convoId) => {

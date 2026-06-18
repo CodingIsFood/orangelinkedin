@@ -161,7 +161,7 @@ export default async function ContractPage({ params }) {
         <div style={{ marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '1.5rem', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem', marginBottom: '1.5rem', color: '#000' }}>Terms of Agreement</h2>
           <p style={{ lineHeight: '1.8', color: '#333', marginBottom: '1rem' }}>
-            This Intellectual Property Transfer Agreement (the "Agreement") confirms the transaction executed on the Orangeeconomy.ng platform. By completing this transaction, the Licensor transfers the specified <strong>{licenseType}</strong> rights of the Work to the Licensee in exchange for the stated Consideration.
+            This Intellectual Property Transfer Agreement (the &quot;Agreement&quot;) confirms the transaction executed on the Orangeeconomy.ng platform. By completing this transaction, the Licensor transfers the specified <strong>{licenseType}</strong> rights of the Work to the Licensee in exchange for the stated Consideration.
           </p>
           <p style={{ lineHeight: '1.8', color: '#333' }}>
             This Agreement is legally binding and enforced by the terms of service of Orangeeconomy.ng. Both parties acknowledge that this digital receipt serves as proof of purchase and license transfer.
@@ -172,6 +172,7 @@ export default async function ContractPage({ params }) {
           <div style={{ borderTop: '1px solid #000', paddingTop: '0.5rem' }}>
             <p style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Licensor Signature</p>
             {purchase.seller_signature ? (
+              /* eslint-disable-next-line @next/next/no-img-element */
               <img src={purchase.seller_signature} alt="Seller Signature" style={{ maxHeight: '80px', display: 'block', marginBottom: '0.5rem' }} />
             ) : user.id === purchase.seller_id ? (
               <SignaturePad contractId={purchase.id} role="seller" />
@@ -183,6 +184,7 @@ export default async function ContractPage({ params }) {
           <div style={{ borderTop: '1px solid #000', paddingTop: '0.5rem' }}>
             <p style={{ margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Licensee Signature</p>
             {purchase.buyer_signature ? (
+              /* eslint-disable-next-line @next/next/no-img-element */
               <img src={purchase.buyer_signature} alt="Buyer Signature" style={{ maxHeight: '80px', display: 'block', marginBottom: '0.5rem' }} />
             ) : user.id === purchase.buyer_id ? (
               <SignaturePad contractId={purchase.id} role="buyer" />
